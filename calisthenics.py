@@ -22,7 +22,7 @@ class mainWindow(QMainWindow, Ui_MainWindow):
         self.burp_reps = []
         
 
-        self.start_day = datetime.strptime("2020-7-21", "%Y-%m-%d") # 운동 시작일 입력
+        self.start_day = datetime.strptime("2020-7-22", "%Y-%m-%d") # 운동 시작일 입력
         self.d_today = datetime.strptime(datetime.now().strftime('%Y-%m-%d'), "%Y-%m-%d")
 
 
@@ -88,10 +88,10 @@ class mainWindow(QMainWindow, Ui_MainWindow):
         
         
     def push_up(self):
-        self.num = self.edit.toPlainText()
+        num = self.edit.toPlainText()
         cnt = 0
         try:
-            n = int(self.num)
+            n = int(num)
         except:
             print("error")
             
