@@ -22,7 +22,7 @@ class mainWindow(QMainWindow, Ui_MainWindow):
         self.burp_reps = []
         
 
-        self.start_day = datetime.strptime("2020-7-22", "%Y-%m-%d") # 운동 시작일 입력
+        self.start_day = datetime.strptime("2020-7-21", "%Y-%m-%d") # 운동 시작일 입력
         self.d_today = datetime.strptime(datetime.now().strftime('%Y-%m-%d'), "%Y-%m-%d")
 
 
@@ -49,7 +49,7 @@ class mainWindow(QMainWindow, Ui_MainWindow):
             
         elif self.h[(self.d_today - self.start_day).days % 4] == "하체":
             self.log_text("Deck of pain rep\n")
-            self.log_text("J, Q, k, Joker = 10\nA = 11")
+            self.log_text("J, Q, K, Joker = 10\nA = 11")
             self.deck()
             self.switch = 2
         
